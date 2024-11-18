@@ -6,25 +6,28 @@ namespace SNAKE
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(3, 3, '#');
-            p1.Draw();
+            Console.SetBufferSize(80,25);
+            Console.CursorVisible = false;
 
-            Point p2 = new Point(5, 6, '$');
-            p2.Draw();
+            // Рамка
+            HorizontalLine upLine = new HorizontalLine(0, 78, 0, '#');
+            upLine.Drow();
 
-            HorizontalLine hLine1 = new HorizontalLine(4, 10, 8, '+');
-            hLine1.Drow();
+            HorizontalLine downLine = new HorizontalLine(0, 78, 24, '#');
+            downLine.Drow();
 
-            HorizontalLine hLine2 = new HorizontalLine(4, 10, 14, '+');
-            hLine2.Drow();
+            VerticalLine leftLine = new VerticalLine(0, 24, 0, '#');
+            leftLine.Drow();
 
-            VerticalLine vLine1 = new VerticalLine(9, 13, 4, '|');
-            vLine1.Drow();
+            VerticalLine rightLine = new VerticalLine(0, 24, 78, '#');
+            rightLine.Drow();
 
-            VerticalLine vLine2 = new VerticalLine(9, 13, 10, '|');
-            vLine2.Drow();
+            //отрисовка начала змейки
+            Point p = new Point(4,5, '*');
+            p.Draw();
 
-            Console.WriteLine();
+            //while (true)
+            //{ }
 
         }
     }
