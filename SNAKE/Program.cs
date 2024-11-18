@@ -1,4 +1,6 @@
-﻿namespace SNAKE
+﻿using System.Numerics;
+
+namespace SNAKE
 {
     internal class Program
     {
@@ -10,33 +12,19 @@
             Point p2 = new Point(5, 6, '$');
             p2.Draw();
 
-            Point p3 = new Point(2, 2, '*');
-            p3.Draw();
+            HorizontalLine hLine1 = new HorizontalLine(4, 10, 8, '+');
+            hLine1.Drow();
 
-            Point p4 = new Point(4, 1, '@');
-            p4.Draw();
+            HorizontalLine hLine2 = new HorizontalLine(4, 10, 14, '+');
+            hLine2.Drow();
+
+            VerticalLine vLine1 = new VerticalLine(9, 13, 4, '|');
+            vLine1.Drow();
+
+            VerticalLine vLine2 = new VerticalLine(9, 13, 10, '|');
+            vLine2.Drow();
 
             Console.WriteLine();
-
-            List<char> list = new List<char>();
-            list.Add('#');
-            list.Add('$');
-            list.Add('*');            
-
-            foreach (char c in list) 
-            {
-                Console.WriteLine(c);
-            }
-
-            List<Point> list2 = new List<Point>();
-
-            list2.Add(p1);
-            list2.Add(p2);
-            list2.Add(p3);
-            list2.Add(p4);
-
-            
-
 
         }
     }
