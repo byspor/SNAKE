@@ -24,10 +24,8 @@ namespace SNAKE
 
             //отрисовка начала змейки
             Point p = new Point(4,5, '*');
-            p.Draw();
-
-            //while (true)
-            //{ }
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Drow();            
 
         }
     }
