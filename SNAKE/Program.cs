@@ -11,32 +11,32 @@ namespace SNAKE
 
             // Рамка
             HorizontalLine upLine = new HorizontalLine(0, 78, 0, '#');
-            upLine.Drow();
+            upLine.Draw();
 
             HorizontalLine downLine = new HorizontalLine(0, 78, 24, '#');
-            downLine.Drow();
+            downLine.Draw();
 
             VerticalLine leftLine = new VerticalLine(0, 24, 0, '#');
-            leftLine.Drow();
+            leftLine.Draw();
 
             VerticalLine rightLine = new VerticalLine(0, 24, 78, '#');
-            rightLine.Drow();
+            rightLine.Draw();
 
             //отрисовка начала змейки
             Point p = new Point(4,5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
-            snake.Drow();
+            snake.Draw();
 
             FoodCreator foodCreator = new FoodCreator(80, 25, '$');
             Point food = foodCreator.CreatorFood();
-            food.Draw();
+            food.DrawEat();
 
             while (true) 
             {
                 if (snake.Eat(food))
                 {
-                    food = foodCreator.CreatorFood();
-                    food.Draw();
+                    food = foodCreator.CreatorFood();                    
+                    food.DrawEat();
                 }
                 else 
                 {

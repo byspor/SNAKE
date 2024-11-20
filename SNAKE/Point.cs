@@ -71,5 +71,13 @@ namespace SNAKE
         {
             return p.x == this.x && p.y == this.y;
         }
+
+        public void DrawEat()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.SetCursorPosition(x, y);
+            Console.Write(sym);
+            Console.ForegroundColor = ConsoleColor.Green;
+        }
     }
 }

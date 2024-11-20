@@ -16,6 +16,14 @@ namespace SNAKE
                 Point p = new Point(x,y,sym);
                 pList.Add(p);
             }            
-        }        
+        }
+
+        public override void Draw()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            base.Draw();        
+        }
     }
+
+
 }

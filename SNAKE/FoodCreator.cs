@@ -22,10 +22,11 @@ namespace SNAKE
         }
 
         public Point CreatorFood()
-        {
+        {            
             int x = random.Next(2, mapWidth - 2);
             int y = random.Next(2, mapHeight - 2);
             return new Point(x, y, sym);
         }
+        
     }
 }
